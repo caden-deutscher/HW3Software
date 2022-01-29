@@ -1,0 +1,114 @@
+<!--
+   @author: Caden Deutscher
+   @title: HW2
+   bugs: no known bugs
+   CSS document title: deutsche23css.css
+   HTML file name: deutsche23page.html
+-->
+<!DOCTYPE html>
+<html>
+   <!--tie in css and name page-->
+   <head>
+      <link rel="stylesheet" href="stylesheets\deutsche23css.css">
+         <script 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+         </script>
+      <script src="javascripts/deutsche23script.js">  
+      </script>
+      <title>CS_341_HW2</title>
+   </head>
+
+   <body>
+
+       <!--page title-->
+      <h1>Cheesecake Order Form</h1>
+
+      <!--1st page section...image-->
+      <div id=topimage>
+         <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Wikimedia Cheesecake" style="width:250px;height:300px;">
+         <br>
+      </div>
+
+      <!--2nd page section order form-->
+      <div id="orderform">
+         <form>
+            <!--nontextual user input-->
+            <table name="order">
+               <tr>
+                  <td>
+                     <label for="dropdown">Quantity</label>
+                  </td>
+                  <td>
+                     <label for="cake_type">Topping</label>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <select name = "dropdown" id="formdrop">
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                     </select>
+                  </td>
+                  <td>
+                     <div class="formradio"></div>
+                        <input type="radio" name="cake_type" class="rbutton" value="Plain">Plain<br>
+                        <input type="radio" name="cake_type" class="rbutton" value="Cherry">Cherry<br>
+                        <input type="radio" name="cake_type" class="rbutton" value="Chocolate">Chocolate<br>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+            
+            <!--Special instructions-->
+            <label for="instructions">Notes:</label> <br>
+            <textarea rows = "5" cols = "60" id="formbox" name = "instructions">
+Enter any special instructions here.
+            </textarea>
+            <br>
+            <br>
+            <input type="submit" id="formsubmit" value="Order">
+         </form>
+      </div>
+
+      <!--3rd page section order history-->
+      <div id="history">
+         <br>
+         <table>
+            <tr>
+               <td>
+                  <h3>Total Orders Last</h3>
+               </td>
+               <td>
+                  <!--This is the dropdown menu with in the order history section of the page-->
+                  <!--A lot of help from:https://w3schoolsrus.github.io/howto/howto_css_dropdown.html#:~:text=How%20TO%20-%20Hoverable%20Dropdown%201%20Dropdown%202,%22Dropdown%22%20link%20to%20see%20the%20dropdown%20menu.%20 -->
+                  <div class="dropdown">
+                     <button class="dropbtn">Jan</button>
+                     <div class="dropdown-content">
+                     <a href="#">Jan</a>
+                     <a href="#">Feb</a>
+                     <a href="#">Mar</a>
+                     <a href="#">Apr</a>
+                     <a href="#">May</a>
+                     <a href="#">Jun</a>
+                     <a href="#">Jul</a>
+                     <a href="#">Aug</a>
+                     <a href="#">Sep</a>
+                     <a href="#">Oct</a>
+                     <a href="#">Nov</a>
+                     <a href="#">Dec</a>
+                     </div>
+                  </div>
+               </td>
+         </tr>
+         </table>
+         <ul>
+            <li>11 cherry</li>
+            <li>17 chocolate</li>
+            <li>31 plain</li>
+         </ul>
+      </div>
+
+   </body>
+</html>

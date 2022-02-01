@@ -1,4 +1,14 @@
+/*
+ @author: Caden Deutscher
+   @title: HW2
+   bugs: no known bugs
+   CSS document title: deutsche23css.css
+   HTML file name: deutsche23page.html
+   JS file name: deutsche23script.js
+*/
+//Make sure html is loaded
 $(document).ready(function(){
+    //when submit is clicked run function
     $("#formsubmit").click(submitForm);
     //Change month after respective dropdown button is clicked
     $(".dropdown-content a").click(changeDate);

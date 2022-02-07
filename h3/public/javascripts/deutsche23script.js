@@ -37,7 +37,12 @@ $(document).ready(function(){
     $("#ordersFromTheMonth").empty();
     $.post('/orders', // data to be submit
     function(data, status, xhr) {// success callback
-             $("#ordersFromTheMonth").append(data);
+        alert(data.length);
+        for (var i = 0, len = data.length; i < len; i++) {
+            var order = data[i];
+            $("#ordersFromTheMonth").append("<li>" + order.quanity + " " + order.topping+ "</li>");
+        }
+             
      });
 
  }

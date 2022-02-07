@@ -34,4 +34,10 @@ $(document).ready(function(){
 //change the text of the dropdown
  changeDate = function() {
     $(".dropbtn").text($(this).text());
+    $("#ordersFromTheMonth").empty();
+    $.post('/orders', // data to be submit
+    function(data, status, xhr) {// success callback
+             $("#ordersFromTheMonth").append(data);
+     });
+
  }

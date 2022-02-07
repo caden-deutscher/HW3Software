@@ -37,7 +37,8 @@ $(document).ready(function(){
     $("#ordersFromTheMonth").empty();
     $.post('/orders', // data to be submit
     function(data, status, xhr) {// success callback
-        alert(data.length);
+        
+        //Loop through JSON objects and append the bulleted list
         for (var i = 0, len = data.length; i < len; i++) {
             var order = data[i];
             $("#ordersFromTheMonth").append("<li>" + order.quanity + " " + order.topping+ "</li>");
